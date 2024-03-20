@@ -18,8 +18,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          port: ${{ secrets.EC2_PORT }}
-          args: -o StrictHostKeyChecking=no  # Add this line to disable host key checking          
+          port: ${{ secrets.EC2_PORT }         
 
       - name: Build Docker image
         run: |
